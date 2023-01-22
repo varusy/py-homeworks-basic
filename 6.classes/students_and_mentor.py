@@ -65,13 +65,13 @@ class Reviewer(Mentor):
         surname = 'Фамилия: {self.surname}'
         return name, surname
 
-def __lt__(self, other):
-    self.grade = middle_grade()
-    other.grade = middle_grade()
-    if isinstance(other, Reviewer):
-        print('Ошибка')
-        return
-    return self.grade > other.grade
+    def __lt__(self, other):
+        self.grade = middle_grade()
+        other.grade = middle_grade()
+        if isinstance(other, Reviewer):
+            print('Ошибка')
+            return
+        return self.grade > other.grade
 
 
  
